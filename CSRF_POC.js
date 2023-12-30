@@ -1,3 +1,4 @@
+async function myAsyncFunction() {
 var csrfToken;
 const response = await fetch("https://www.codechef.com/api/user/me");
 const data = await response.json();
@@ -21,3 +22,5 @@ fetch('/users/' + username +'/edit')
         .then(response => response.text())
         .then(data => console.log('Response:', data))
         })
+}
+myAsyncFunction();
